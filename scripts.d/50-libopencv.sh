@@ -124,7 +124,8 @@ ffbuild_dockerbuild() {
     ldconfig
 	
 	#Include the libs in your environment
-	echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf
+	#echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf
+ 	sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf' && \
 	ldconfig
 	
 	

@@ -98,8 +98,8 @@ ffbuild_dockerbuild() {
 		   $GPU_OPTIONS \
 		   $TBB_OPTION \
           -DWITH_OPENCL=OFF \
-          -DWITH_V4L=OFF \
-		  -DWITH_FFMPEG=OFF \
+          -DWITH_V4L=ON \
+		  -DWITH_FFMPEG=ON \
 		  -DWITH_GSTREAMER=OFF \
           -DWITH_MSMF=OFF \
 		  -DWITH_DSHOW=OFF \

@@ -120,8 +120,7 @@ ffbuild_dockerbuild() {
 		  -DBUILD_SHARED_LIBS=OFF ..
    
     make -j$(nproc)
-	make install
-    ldconfig
+    make install
 	
 	#Include the libs in your environment
 	#echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf

@@ -145,7 +145,8 @@ ffbuild_dockerbuild() {
 	mkdir -p "$FFBUILD_PREFIX/lib/pkgconfig"
 	# Eğer hedef dizinde dosya zaten varsa, kopyalama işlemi yapmayalım
 	if [ ! -f "$FFBUILD_PREFIX/lib/pkgconfig/opencv.pc" ]; then
-		cp "$FFBUILD_PREFIX/lib/pkgconfig/opencv.pc" "$FFBUILD_PREFIX/lib/pkgconfig/"
+		# cp "$FFBUILD_PREFIX/lib/pkgconfig/opencv.pc" "$FFBUILD_PREFIX/lib/pkgconfig/"
+  		cp "/etc/ld.so.conf.d/opencv.conf" "$FFBUILD_PREFIX/lib/pkgconfig/opencv.conf"
 		echo "opencv.pc başarıyla kopyalandı."
 	else
 		echo "opencv.pc zaten mevcut, kopyalanmadı."

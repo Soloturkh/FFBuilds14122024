@@ -44,8 +44,6 @@ jobs:
     needs: pre_check
     runs-on: ubuntu-latest
     steps:
-      - name: Docker test
-        run: echo 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 | docker login ghcr.io -u Soloturkh --password-stdin
       - name: Free Disk-Space
         run: df -h && sudo apt-get clean && docker system prune -a -f && sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc && df -h
       - name: Checkout
@@ -58,8 +56,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ github.token }}
+          username: Soloturkh
+          password: github_pat_11A6KFGUQ0Ey2gcvq7fQUD_hIwHp9i8Ethij4BLqV0Unh79klntgEeVqfCCwlD6IHOBVSQN3IXlCeFgmG
       - name: Image Name
         id: imagename
         run: |

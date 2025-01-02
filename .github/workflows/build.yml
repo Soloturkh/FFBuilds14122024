@@ -56,8 +56,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: Soloturkh
-          password: github_pat_11A6KFGUQ0Ey2gcvq7fQUD_hIwHp9i8Ethij4BLqV0Unh79klntgEeVqfCCwlD6IHOBVSQN3IXlCeFgmG
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
       - name: Image Name
         id: imagename
         run: |
